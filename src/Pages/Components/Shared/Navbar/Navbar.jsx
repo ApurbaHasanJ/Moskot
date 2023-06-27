@@ -1,14 +1,43 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { BsBell } from "react-icons/bs";
-// import { HiMiniBars3BottomRight, } from 'react-icons/hi';
+import { FaUserCircle } from "react-icons/fa";
 import { Bars3BottomRightIcon, XMarkIcon } from "@heroicons/react/24/solid";
+import { AuthContext } from "../../../../Providers/AuthProvider";
+import Swal from "sweetalert2";
+
+
 
 const Navbar = () => {
+  const { user, logOut } = useContext(AuthContext);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  // Handle Logout
+  const handleLogout = () => {
+    logOut()
+      .then(() => {
+        Swal.fire({
+          position: "top-end",
+          icon: "success",
+          title: "Log Out Successfully!!",
+          showConfirmButton: false,
+          timer: 1500,
+        });
+      })
+      .catch((err) => {
+        console.log(err.message);
+      });
+  };
 
   const navItems = (
     <>
+      <li>
+        <NavLink
+          to="/"
+          className={({ isActive }) => (isActive ? "active" : "default")}>
+          Home
+        </NavLink>
+      </li>
       <li>
         <NavLink
           to="/availability"
@@ -42,29 +71,52 @@ const Navbar = () => {
           </div>
         </NavLink>
       </li>
-      <li>
-        <NavLink
-          to="/login"
-          className={({ isActive }) => (isActive ? "active" : "default")}>
-          
-          <div className="my-btn">Login</div>
-        </NavLink>
+      {user && (
+        <li>
+          <button onClick={handleLogout}>
+            <div className="my-btn">Log Out</div>
+          </button>
+        </li>
+      )}
+      <li className="">
+        {user ? (
+          <div className="w-8 rounded-full">
+            {user?.photoURL ? (
+              <div className="w-[38px] h-[38px] rounded-full overflow-hidden border-sky-400  p-[1px] border-2">
+                <img
+                  src={user?.photoURL}
+                  alt={user?.displayName}
+                  title={user?.displayName}
+                  className="w-full  object-cover rounded-full h-full"
+                />
+              </div>
+            ) : (
+              <FaUserCircle className="text-2xl" />
+            )}
+          </div>
+        ) : (
+          <Link to="/login" className="my-btn">
+            Login
+          </Link>
+        )}
       </li>
     </>
   );
 
   return (
     <div className=" bg-[#FFF9F9]  text-[#283163]">
-      <div className="px-4 relative md:h-[100px]  md:px-24 lg:px-8">
-        <div className="my-container relative  sm:max-w-xl md:max-w-full lg:max-w-screen-xl flex items-center justify-between">
+      <div className=" relative md:h-[100px] ">
+        <div className="my-container relative   flex items-center justify-between">
           {/* Logo Section */}
           <Link to="/" className="inline-flex items-center">
-            <div className="lg:h-[41px] bg-white grid justify-center items-center lg:w-[41px] md:h-10 md:w-10 h-8 w-8 border border-[#283163] rounded">
-              <img
+            <div style={{ fontFamily: 'Reenie Beanie' }} className="lg:h-[41px] bg-white grid justify-center items-center lg:w-[41px] md:h-10 md:w-10 h-8 w-8 border border-[#283163] rounded">
+              <p className="text-3xl">M</p>
+              
+              {/* <img
                 className="bg-white"
                 src="https://i.postimg.cc/bJz7pg0k/m.jpg"
                 alt="logo"
-              />
+              /> */}
             </div>
             <span className="ml-2 lg:text-4xl md:text-3xl text-base tracking-wide text-gray-800">
               <div className="flex relative">

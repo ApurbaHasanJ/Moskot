@@ -2,15 +2,35 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: "Reenie Beanie";
+  src: url("../assets/fonts/reenie-beanie.ttf") format("truetype");
+}
+
 .my-container {
-  @apply mx-auto p-3 md:p-6 sm:max-w-xl md:max-w-full lg:max-w-screen-xl w-full;
+  @apply mx-auto p-3  md:p-6 lg:px-16  sm:max-w-xl md:max-w-full lg:max-w-[1440px] w-full;
 }
 
 .my-btn {
-  @apply inline-flex items-center capitalize lg:text-base text-xs lg:px-4 md:px-4 px-3  py-2  mb-3 font-medium text-white transition hover:drop-shadow-2xl rounded border-none shadow-md md:mb-0  bg-[#283163]  hover:bg-[#283163] duration-700;
+  @apply grid text-center items-center capitalize lg:text-base text-xs lg:px-4 md:px-4 px-3  py-2  mb-3 font-medium text-white transition hover:drop-shadow-2xl rounded border-none shadow-md md:mb-0  bg-[#283163]   hover:bg-blue-900 duration-700;
 }
+
+.reg-btn {
+  @apply grid text-center rounded-md items-center capitalize lg:text-base text-xs md:px-4 px-3  py-3  mb-3 font-medium text-white transition hover:drop-shadow-2xl  border-none shadow-md md:mb-0  bg-[#5242F0]   hover:bg-blue-900 duration-700;
+}
+
 .btn-sec {
-  @apply inline-flex items-center justify-center lg:text-base capitalize text-xs  lg:px-6 tracking-wide md:px-4 px-3 lg:py-2 py-1  mb-3 font-medium transition rounded-md drop-shadow-2xl border border-sky-300 text-sky-300 hover:text-white hover:bg-sky-300 duration-700;
+  @apply inline-flex items-center justify-center lg:text-base capitalize text-xs  md:px-4 px-3  py-3    tracking-wide w-full  lg:py-2   mb-3 font-medium transition rounded-md drop-shadow-2xl border border-[#5242F0]  text-[#5242F0]  hover:text-white hover:bg-[#5242F0]  duration-700;
+}
+
+.blue-btn {
+  @apply bg-[#4C54F8] hover:bg-[#232de6] hover:shadow-2xl flex justify-center items-center rounded-lg text-white lg:text-base  text-xs  md:p-5 px-3  py-3 tracking-wide  lg:py-[13px] mb-3  font-medium ;
+}
+.blue-btn-sec {
+  @apply flex flex-nowrap ml-auto items-center justify-center lg:text-base  text-xs  md:p-5 px-3  py-3 tracking-wide  lg:py-3 mb-3  font-medium transition  rounded-lg drop-shadow-2xl border border-[#4C54F8]  text-[#4C54F8]  hover:text-white hover:bg-[#4C54F8] duration-700;
+}
+.blue-btn-dis {
+  @apply flex flex-nowrap ml-auto items-center justify-center lg:text-base  text-xs  md:p-4 px-3  py-3 tracking-wide  lg:py-2 mb-3  font-medium transition  rounded-lg drop-shadow-2xl border border-[#a4a7d6]  text-[#a4a7d6]   duration-700 ;
 }
 
 .badge {

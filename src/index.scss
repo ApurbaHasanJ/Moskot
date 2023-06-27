@@ -1,0 +1,34 @@
+$primary-color: #283163;
+$secondary-color: #5242F0;
+
+// .my-container {
+//   margin: 0 auto;
+//   padding: 3rem;
+
+//   @media (min-width: 768px) {
+//     padding: 6rem;
+//   }
+
+//   @media (min-width: 1024px) {
+//     max-width: 100%;
+//   }
+// }
+
+.my-btn {
+  display: grid;
+  text-align: center;
+  align-items: center;
+  text-transform: capitalize;
+  font-size: 14px;
+  padding: 3px;
+  margin-bottom: 3rem;
+  font-weight: bold;
+  color: white;
+  transition: box-shadow 0.3s;
+
+  &:hover {
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.8);
+  }
+
+  background-color: $primary-color;
+}
