@@ -12,7 +12,7 @@ const Team = () => {
   const [showPendingMembers, setShowPendingMembers] = useState(false);
 
   useEffect(() => {
-    fetch("/public/users.json")
+    fetch("/users.json")
       .then((res) => res.json())
       .then((data) => {
         setUsers(data);
@@ -242,7 +242,7 @@ const Team = () => {
             {showActiveMembers === true ? (
               <tbody className=" ">
                 {activeMembers.map((member) => (
-                  <tr key={member._id} className="border rounded-lg">
+                  <tr key={member._id} className="border rounded-lg hover">
                     <td>
                       <div className=" w-[58px] relative border-2 p-[1px] h-[58px] flex justify-center items-center rounded-full">
                         <div className=" flex justify-center items-center text-[#3267B1] rounded-full">

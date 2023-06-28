@@ -1,5 +1,5 @@
 import { useContext, useState } from "react";
-import { Link, NavLink } from "react-router-dom";
+import { Link, NavLink, useNavigate } from "react-router-dom";
 import { BsBell } from "react-icons/bs";
 import { FaUserCircle } from "react-icons/fa";
 import { Bars3BottomRightIcon, XMarkIcon } from "@heroicons/react/24/solid";
@@ -9,6 +9,7 @@ import Swal from "sweetalert2";
 
 
 const Navbar = () => {
+  const navigate = useNavigate();
   const { user, logOut } = useContext(AuthContext);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
@@ -23,6 +24,7 @@ const Navbar = () => {
           showConfirmButton: false,
           timer: 1500,
         });
+        navigate("/");
       })
       .catch((err) => {
         console.log(err.message);
@@ -91,7 +93,7 @@ const Navbar = () => {
                 />
               </div>
             ) : (
-              <FaUserCircle className="text-2xl" />
+              <FaUserCircle className="text-[38px]" />
             )}
           </div>
         ) : (

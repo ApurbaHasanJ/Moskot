@@ -5,6 +5,7 @@ import Login from "../Pages/Login/Login";
 import SignUp from "../Pages/SignUp/SignUp";
 import Community from "../Pages/Community/Community";
 import Team from "../Pages/Team/Team";
+import Agile from "../Pages/Agile/Agile";
 
 const router = createBrowserRouter([
   {
@@ -18,6 +19,10 @@ const router = createBrowserRouter([
       {
         path: "/community",
         element: <Community />,
+      },
+      {
+        path: "/agile3",
+        element: <Agile />,
       },
       {
         path: `/team/:id`,

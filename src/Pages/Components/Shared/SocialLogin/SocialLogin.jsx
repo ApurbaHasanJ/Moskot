@@ -22,11 +22,11 @@ const SocialLogin = () => {
 
   return (
     <div className="mb-3">
-      <div className="divider-vertical text-center">OR</div>
+       <div className="divider">OR</div>
       <div className="form-control mt-4 ">
         <button
           onClick={handleGoogleSignIn}
-          className=" w-full flex gap-3 btn-sec">
+          className=" w-full flex justify-center items-center gap-3 blue-btn-dis border-[#4C54F8]  text-[#4C54F8] hover:bg-[#cacdfc] ">
           <img
             className="w-6 h-6"
             src="https://i.postimg.cc/4NhHcV5v/google.png"
