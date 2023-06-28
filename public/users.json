@@ -14,7 +14,7 @@
       "name": "Jane Smith",
       "email": "janesmith@example.com",
       "title": "Developer",
-      "status": "active",
+      "status": "pending",
       "role": "MERN Stack Developer"
     },
     {
@@ -77,7 +77,7 @@
       "name": "Olivia Taylor",
       "email": "oliviataylor@example.com",
       "title": "Engineer",
-      "status": "active",
+      "status": "pending",
       "role": "Software Engineer"
     },
     {

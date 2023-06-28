@@ -27,10 +27,10 @@
   @apply bg-[#4C54F8] hover:bg-[#232de6] hover:shadow-2xl flex justify-center items-center rounded-lg text-white lg:text-base  text-xs  md:p-5 px-3  py-3 tracking-wide  lg:py-[13px] mb-3  font-medium ;
 }
 .blue-btn-sec {
-  @apply flex flex-nowrap ml-auto items-center justify-center lg:text-base  text-xs  md:p-5 px-3  py-3 tracking-wide  lg:py-3 mb-3  font-medium transition  rounded-lg drop-shadow-2xl border border-[#4C54F8]  text-[#4C54F8]  hover:text-white hover:bg-[#4C54F8] duration-700;
+  @apply flex flex-nowrap ml-auto items-center justify-center lg:text-base  text-xs  md:p-5 px-3  py-3 tracking-wide  lg:py-3 mb-3  font-medium transition  rounded-lg drop-shadow-2xl border border-[#4C54F8]  text-[#4C54F8] hover:bg-[#cacdfc]  duration-700;
 }
 .blue-btn-dis {
-  @apply flex flex-nowrap ml-auto items-center justify-center lg:text-base  text-xs  md:p-4 px-3  py-3 tracking-wide  lg:py-2 mb-3  font-medium transition  rounded-lg drop-shadow-2xl border border-[#a4a7d6]  text-[#a4a7d6]   duration-700 ;
+  @apply flex flex-nowrap ml-auto items-center lg:py-[13px] lg:text-base  text-xs  md:p-4 px-3  py-3 tracking-wide  mb-3  font-medium transition  rounded-lg drop-shadow-2xl border    duration-700 ;
 }
 
 .badge {
