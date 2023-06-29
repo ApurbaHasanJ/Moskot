@@ -6,11 +6,13 @@ import SignUp from "../Pages/SignUp/SignUp";
 import Community from "../Pages/Community/Community";
 import Team from "../Pages/Team/Team";
 import Agile from "../Pages/Agile/Agile";
+import ErrorPage from "../Pages/ErrorPage/ErrorPage";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Main />,
+    errorElement: <ErrorPage />,
     children: [
       {
         path: "/",

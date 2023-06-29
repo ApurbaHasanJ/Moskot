@@ -4,13 +4,11 @@ import { useContext } from "react";
 
 import { AuthContext } from "../../Providers/AuthProvider";
 import SocialLogin from "../Components/Shared/SocialLogin/SocialLogin";
-
+import { Helmet } from "react-helmet";
 
 const Login = () => {
-  const navigate = useNavigate()
+  const navigate = useNavigate();
   const { signIn } = useContext(AuthContext);
-
-  
 
   const handleLogin = (e) => {
     e.preventDefault();
@@ -25,7 +23,7 @@ const Login = () => {
         console.log(user);
 
         console.log(user);
-        navigate("/agile3")
+        navigate("/agile3");
       })
       .catch((error) => {
         console.log(error);
@@ -34,6 +32,9 @@ const Login = () => {
 
   return (
     <>
+      <Helmet>
+        <title>Login | Moskot</title>
+      </Helmet>
       <div className="hero h-screen">
         <div className="hero-content flex-col">
           <div className="w-[130px]">
@@ -88,7 +89,6 @@ const Login = () => {
           </div>
         </div>
       </div>
-      
     </>
   );
 };
