@@ -10,6 +10,7 @@ Moskot is a website that allows users to create and manage teams from the commun
 Moskot is built using the following technologies:
 
 - React: A JavaScript library for building user interfaces.
+- Firebase: Platform for authentication and hosting of the web application.
 - Tailwind CSS: A highly customizable CSS framework for rapid UI development.
 - DaisyUI: A plugin for Tailwind CSS that adds a set of utility classes and components.
 
