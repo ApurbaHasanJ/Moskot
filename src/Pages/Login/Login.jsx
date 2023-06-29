@@ -1,19 +1,16 @@
 import { Link, useNavigate } from "react-router-dom";
 // import "../../index.SCSS"
-import { useContext,  useState } from "react";
+import { useContext } from "react";
 
 import { AuthContext } from "../../Providers/AuthProvider";
 import SocialLogin from "../Components/Shared/SocialLogin/SocialLogin";
-import Agile from "../Agile/Agile";
+
 
 const Login = () => {
   const navigate = useNavigate()
-  const [isModalOpen, setIsModalOpen] = useState(false);
   const { signIn } = useContext(AuthContext);
 
-  const handleCloseModal = () => {
-    setIsModalOpen(false);
-  };
+  
 
   const handleLogin = (e) => {
     e.preventDefault();
@@ -29,7 +26,6 @@ const Login = () => {
 
         console.log(user);
         navigate("/agile3")
-        setIsModalOpen(true);
       })
       .catch((error) => {
         console.log(error);
@@ -92,7 +88,7 @@ const Login = () => {
           </div>
         </div>
       </div>
-      {isModalOpen && <Agile closeModal={handleCloseModal} />}
+      
     </>
   );
 };

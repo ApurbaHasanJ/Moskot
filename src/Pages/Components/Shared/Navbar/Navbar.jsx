@@ -15,6 +15,7 @@ const Navbar = () => {
 
   // Handle Logout
   const handleLogout = () => {
+    localStorage.clear();
     logOut()
       .then(() => {
         Swal.fire({

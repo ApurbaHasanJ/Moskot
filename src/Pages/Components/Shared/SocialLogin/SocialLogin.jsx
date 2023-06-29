@@ -6,7 +6,7 @@ const SocialLogin = () => {
   const location = useLocation();
   const navigate = useNavigate();
 
-  const from = location.state?.from?.pathname || "/community";
+  const from = location.state?.from?.pathname || "/agile3";
   const { googleSignIn } = useContext(AuthContext);
 
   const handleGoogleSignIn = () => {

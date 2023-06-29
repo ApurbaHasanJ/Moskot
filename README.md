@@ -1,6 +1,6 @@
 # Live Site : [Moskot](https://moskot-c28b5.web.app/)
 ---
-## Names you can search with for add members:
+## Names you can search to add members:
 John Doe, Jane Smith, Alice Johnson, Bob Wilson, Emily Davis, Michael Brown, Sophia Lee, William Miller, Olivia Taylor, James Anderson, Emma Clark.
 
 Moskot is a website that allows users to create and manage teams from the community page. Users can provide the required information to create a team and upon successful submission, they will be redirected to the newly created team page. In the team page, users can invite members, view active members, and pending member invitations. Additionally, when a member logs in, a modal will appear to accept the invitation, redirecting them to the team they were invited to.
